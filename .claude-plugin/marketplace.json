@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "wame",
+  "description": "Claude Code plugins by WAME — developer productivity tools for teams",
+  "owner": {
+    "name": "WAME",
+    "email": "info@wame.sk"
+  },
+  "plugins": [
+    {
+      "name": "git-commits",
+      "description": "Fetch and summarize git commits across all repositories for a date range. Shows timeline with AI-powered summaries, file changes, and project breakdown. Supports GitHub, GitLab, Bitbucket.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-git-commits-plugin.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-git-commits-plugin"
+    }
+  ]
+}
