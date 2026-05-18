@@ -20,6 +20,20 @@
         "url": "https://github.com/wamesk/claude-code-plugin-git-commits.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-git-commits"
+    },
+    {
+      "name": "laravel-docs",
+      "description": "Generate Laravel project specifications (technical, business, admin navigation) for individual models or modules. Auto-detects modular (wamesk/*, Modules/*) vs flat (app/Models) project structure. Configurable output paths, per-project config, and replaceable prompts per documentation type.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "documentation",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-laravel-docs.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-laravel-docs"
     }
   ]
 }
