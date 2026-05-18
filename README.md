@@ -20,7 +20,8 @@ Then install any plugin:
 
 | Plugin | Description | Repo |
 |--------|-------------|------|
-| **git-commits** | Fetch and summarize git commits across all repositories for a date range. AI-powered summaries, file changes, project breakdown. | [wamesk/claude-git-commits-plugin](https://github.com/wamesk/claude-git-commits-plugin) |
+| **git-commits** | Fetch and summarize git commits across all repositories for a date range. AI-powered summaries, file changes, project breakdown. | [wamesk/claude-code-plugin-git-commits](https://github.com/wamesk/claude-code-plugin-git-commits) |
+| **laravel-docs** | Generate Laravel project documentation (technical, business, admin navigation) for individual models or modules. Auto-detects modular (`wamesk/*`, `Modules/*`) vs flat (`app/Models`) layout. Per-project config with replaceable prompts per type. | [wamesk/claude-code-plugin-laravel-docs](https://github.com/wamesk/claude-code-plugin-laravel-docs) |
 
 ## Adding a New Plugin
 
