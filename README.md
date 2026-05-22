@@ -22,6 +22,7 @@ Then install any plugin:
 |--------|-------------|------|
 | **git-commits** | Fetch and summarize git commits across all repositories for a date range. AI-powered summaries, file changes, project breakdown. | [wamesk/claude-code-plugin-git-commits](https://github.com/wamesk/claude-code-plugin-git-commits) |
 | **laravel-docs** | Generate Laravel project documentation (technical, business, admin navigation) for individual models or modules. Auto-detects modular (`wamesk/*`, `Modules/*`) vs flat (`app/Models`) layout. Per-project config with replaceable prompts per type. | [wamesk/claude-code-plugin-laravel-docs](https://github.com/wamesk/claude-code-plugin-laravel-docs) |
+| **teamwork-tasks-from-dnr** | Generate a Teamwork.com import-ready XLSX plus a companion Markdown plan from a "Detailný návrh riešenia" (DNR) document. LLM extraction of task lists, business-friendly task names, acceptance criteria (checkbox list), goal, and technical plan. Multi-language (`sk`/`en`/`cs`), DOCX/PDF/MD input, stdlib-only XLSX writer. Single repo serves both Claude Code (plugin) and Claude.ai (skill). | [wamesk/claude-code-plugin-teamwork-tasks-from-dnr](https://github.com/wamesk/claude-code-plugin-teamwork-tasks-from-dnr) |
 
 ## Adding a New Plugin
 

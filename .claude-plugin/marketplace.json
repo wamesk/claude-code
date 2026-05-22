@@ -34,6 +34,20 @@
         "url": "https://github.com/wamesk/claude-code-plugin-laravel-docs.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-laravel-docs"
+    },
+    {
+      "name": "teamwork-tasks-from-dnr",
+      "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-teamwork-tasks-from-dnr.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-tasks-from-dnr"
     }
   ]
 }
