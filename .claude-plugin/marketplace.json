@@ -8,6 +8,20 @@
   },
   "plugins": [
     {
+      "name": "git-commit",
+      "description": "Turn the current working tree into one or more logical git commits using the TYPE(scope): Message convention from the user's global ~/.claude/CLAUDE.md. Title and body always in English; TYPE and scope inferred from the changes. When the run is tied to a task, the task ID is appended in square brackets — TYPE(scope)[<task-id>]: Message — detected from $ARGUMENTS, --task=<id>, or current branch name (feature/teamwork-task-<id>, task/<id>, ...). When no task ID is detected, the brackets are omitted entirely (never empty []). Groups related changes into one commit each; pass --all-in-one to skip grouping. Never adds Co-Authored-By lines, never pushes, never amends. Singular 'git-commit' — distinct from the existing 'git-commits' plugin which summarises historical commits.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-git-commit.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-git-commit"
+    },
+    {
       "name": "git-commits",
       "description": "Fetch and summarize git commits across all repositories for a date range. Shows timeline with AI-powered summaries, file changes, and project breakdown. Supports GitHub, GitLab, Bitbucket.",
       "version": "1.0.0",
@@ -62,20 +76,6 @@
         "url": "https://github.com/wamesk/claude-code-plugin-teamwork-task.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-task"
-    },
-    {
-      "name": "git-commit",
-      "description": "Turn the current working tree into one or more logical git commits using the TYPE(scope): Message convention from the user's global ~/.claude/CLAUDE.md. Title and body always in English; TYPE and scope inferred from the changes. When the run is tied to a task, the task ID is appended in square brackets — TYPE(scope)[<task-id>]: Message — detected from $ARGUMENTS, --task=<id>, or current branch name (feature/teamwork-task-<id>, task/<id>, ...). When no task ID is detected, the brackets are omitted entirely (never empty []). Groups related changes into one commit each; pass --all-in-one to skip grouping. Never adds Co-Authored-By lines, never pushes, never amends. Singular 'git-commit' — distinct from the existing 'git-commits' plugin which summarises historical commits.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Stanislav Červeňák"
-      },
-      "category": "productivity",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/wamesk/claude-code-plugin-git-commit.git"
-      },
-      "homepage": "https://github.com/wamesk/claude-code-plugin-git-commit"
     }
   ]
 }
