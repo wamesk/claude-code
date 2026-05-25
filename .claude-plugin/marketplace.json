@@ -48,6 +48,34 @@
         "url": "https://github.com/wamesk/claude-code-plugin-teamwork-tasks-from-dnr.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-tasks-from-dnr"
+    },
+    {
+      "name": "teamwork-task",
+      "description": "Fetch Teamwork.com tasklist/task by URL (including all task comments), render a plan for approval, then implement each task in the current repository, commit per task using TYPE(scope)[<task-id>]: Message convention, and log spent time back to Teamwork via the REST API v3. Parses task descriptions on the first HR into acceptance criteria + final summary. Configurable plan mode (overview | per_task | none), time tracking (real time rounded to 5 minutes, or ask) and branching strategy (current branch or new feature branch). Persistent config (API token survives plugin updates). Pauses and asks via AskUserQuestion on blockers. Push is left to the user.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-teamwork-task.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-task"
+    },
+    {
+      "name": "git-commit",
+      "description": "Turn the current working tree into one or more logical git commits using the TYPE(scope): Message convention from the user's global ~/.claude/CLAUDE.md. Title and body always in English; TYPE and scope inferred from the changes. When the run is tied to a task, the task ID is appended in square brackets — TYPE(scope)[<task-id>]: Message — detected from $ARGUMENTS, --task=<id>, or current branch name (feature/teamwork-task-<id>, task/<id>, ...). When no task ID is detected, the brackets are omitted entirely (never empty []). Groups related changes into one commit each; pass --all-in-one to skip grouping. Never adds Co-Authored-By lines, never pushes, never amends. Singular 'git-commit' — distinct from the existing 'git-commits' plugin which summarises historical commits.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-git-commit.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-git-commit"
     }
   ]
 }
