@@ -66,7 +66,7 @@
     {
       "name": "teamwork-task",
       "description": "Fetch Teamwork.com tasklist/task by URL (including all task comments), render a plan for approval, then implement each task in the current repository, commit per task using TYPE(scope)[<task-id>]: Message convention, and log spent time back to Teamwork via the REST API v3 as sequential, non-overlapping entries (both start time and duration aligned to the 5-minute rounding step). Time-log descriptions are written in a business tone (what was delivered for the user/business), technical detail only when needed for identification. Parses task descriptions on the first HR into acceptance criteria + final summary. Configurable plan mode (overview | per_task | none), time tracking (real time rounded to 5 minutes, or ask) and branching strategy (current branch or new feature branch). Persistent config (API token survives plugin updates). Pauses and asks via AskUserQuestion on blockers. Push is left to the user.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
