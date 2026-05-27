@@ -65,8 +65,8 @@
     },
     {
       "name": "teamwork-task",
-      "description": "Fetch Teamwork.com tasklist/task by URL (including all task comments), render a plan for approval, then implement each task in the current repository, commit per task using TYPE(scope)[<task-id>]: Message convention, and log spent time back to Teamwork via the REST API v3 as sequential, non-overlapping entries (both start time and duration aligned to the 5-minute rounding step). Time-log descriptions are written in a business tone (what was delivered for the user/business), technical detail only when needed for identification. Parses task descriptions on the first HR into acceptance criteria + final summary. Configurable plan mode (overview | per_task | none), time tracking (real time rounded to 5 minutes, or ask) and branching strategy (current branch or new feature branch). Persistent config (API token survives plugin updates). Pauses and asks via AskUserQuestion on blockers. Push is left to the user.",
-      "version": "1.1.0",
+      "description": "Fetch Teamwork.com tasklist/task by URL (including all task comments), render a plan for approval, then implement each task in the current repository, commit per task using TYPE(scope)[<task-id>]: Message convention, and log spent time back to Teamwork via the REST API v3 as sequential, non-overlapping entries (both start time and duration aligned to the 5-minute rounding step). Time-log descriptions are written in a business tone (what was delivered for the user/business), technical detail only when needed for identification. Parses task descriptions on the first HR into acceptance criteria + final summary. Configurable plan mode (overview | per_task | none), time tracking (real time rounded to 5 minutes, or ask) and branching strategy (current branch or new feature branch). When the companion `teamwork-task-test` skill is installed, hands off to it automatically at the end so each task's acceptance criteria get individually verified before push (default ON, disable with --test-after=false). Persistent config (API token survives plugin updates). Pauses and asks via AskUserQuestion on blockers. Push is left to the user.",
+      "version": "1.1.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -76,6 +76,20 @@
         "url": "https://github.com/wamesk/claude-code-plugin-teamwork-task.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-task"
+    },
+    {
+      "name": "teamwork-task-test",
+      "description": "Fetch a Teamwork.com task or whole tasklist by URL, extract every acceptance criterion individually, and verify each against the current repository — by running existing Pest / PHPUnit / Laravel Dusk / Cypress / Playwright / Vitest / Jest / Selenium tests where possible, by driving a real browser via the chrome-devtools MCP for UI-shaped criteria, and by writing concrete numbered manual scenarios for anything that cannot be automated. The output is a per-task report where every AC has its own row marked ✅ verified / ⚠️ partial / ❌ failed / 📋 manual / 📝 proposed, plus a tasklist-level roll-up. Read-only against Teamwork by default — never moves the board or posts a comment unless the user opts in; the only default write-back is a sequential, non-overlapping time log so QA work appears in the timesheet. Shares the API token config with the teamwork-task plugin so setup is one-time.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-teamwork-task-test.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-task-test"
     }
   ]
 }
