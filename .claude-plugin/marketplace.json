@@ -50,6 +50,20 @@
       "homepage": "https://github.com/wamesk/claude-code-plugin-laravel-docs"
     },
     {
+      "name": "dnr-business",
+      "description": "Generate a WAME 'Detailný návrh riešenia' (DNR) — the binding pre-development project document — as a branded .docx. Accepts a folder, file(s), or free-form description as input; if invoked inside an existing project repository, deep-analyses modules/architecture for richer context. Outputs a client-language (sk/cs/en) Word document in WAME visual identity (green #20E87A, navy #091145, Inter font), with mandatory sections (Východiskový stav, Ciele, Popis riešenia, Technické riešenie, Fázy, Riziká, Podmienky). Sections 'Fázy' and 'Riziká' (min. 5) are schema-enforced. Never invents client data — uses [DOPLNIŤ] placeholders and reports them as open follow-ups.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "documentation",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-dnr-business.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-dnr-business"
+    },
+    {
       "name": "teamwork-tasks-from-dnr",
       "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md.",
       "version": "1.0.0",
