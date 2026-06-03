@@ -66,7 +66,7 @@
     {
       "name": "teamwork-tasks-from-dnr",
       "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
