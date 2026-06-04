@@ -51,8 +51,8 @@
     },
     {
       "name": "dnr-business",
-      "description": "Generate a WAME 'Detailný návrh riešenia' (DNR) — the binding pre-development project document — as a branded .docx. Accepts a folder, file(s), or free-form description as input; if invoked inside an existing project repository, deep-analyses modules/architecture for richer context. Outputs a client-language (sk/cs/en) Word document in WAME visual identity (green #20E87A, navy #091145, Inter font), with mandatory sections (Východiskový stav, Ciele, Popis riešenia, Technické riešenie, Fázy, Riziká, Podmienky). Sections 'Fázy' and 'Riziká' (min. 5) are schema-enforced. Never invents client data — uses [DOPLNIŤ] placeholders and reports them as open follow-ups.",
-      "version": "1.1.2",
+      "description": "Generate a WAME 'Detailný návrh riešenia' (DNR) — the binding pre-development project document — as a branded .docx. Accepts a folder, file(s), or free-form description as input; if invoked inside an existing project repository, deep-analyses modules/architecture for richer context. Outputs a client-language (sk/cs/en) Word document in WAME visual identity (green #20E87A, navy #091145, Inter font), with mandatory sections (Východiskový stav, Ciele, Popis riešenia, Technické riešenie, Fázy, Riziká, Podmienky). Sections 'Fázy' and 'Riziká' (min. 5) are schema-enforced. Never invents client data — uses [DOPLNIŤ] placeholders and reports them as open follow-ups. Since 1.2.0 phase 'trvanie' follows the WAME senior-engineer + Claude Code methodology — per-task minute estimates rolled up to weeks and always expressed as a range (e.g. '3–4 weeks') so the buffer stays visible to the client.",
+      "version": "1.2.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -65,8 +65,8 @@
     },
     {
       "name": "teamwork-tasks-from-dnr",
-      "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md.",
-      "version": "1.1.0",
+      "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md. Since 1.2.0 the per-task estimates follow the WAME senior-engineer + Claude Code methodology — 30–50% lower than legacy hand-written estimates, 15–30% buffer applied on top, anchors documented in SKILL.md.",
+      "version": "1.2.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -104,6 +104,20 @@
         "url": "https://github.com/wamesk/claude-code-plugin-teamwork-task-test.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-task-test"
+    },
+    {
+      "name": "teamwork-task-analyze",
+      "description": "Fetch a Teamwork.com task or whole tasklist by URL and prepare it for implementation. Pulls the task name, description, attachments, comments, comment-attached files, and subtasks via REST API v3 (reusing the shared config/token from the teamwork-task plugin), deep-scans the current repository for related code/specs, then interactively rewrites the task description into the canonical WAME format: [optional preamble] → HR → Akceptačné kritériá → HR → Cieľ → HR → Technický popis (Claude Code Plan-Mode output — files, functions, DB schema, step-by-step, edge cases). Pauses with AskUserQuestion (in batches of 4, up to 6 per run) for every clarifying question that arises and folds the answers back into the new description; anything unresolved is preserved as [OTVORENÉ] markers in the relevant section. Reviews existing subtasks (updates outdated ones, proposes splitting tasks above 240 min into 2–6 atomic subtasks when AC have natural cut points; never forces a split for small tasks). Checks the time estimate using the WAME senior-engineer-with-Claude-Code methodology — sets one when missing, otherwise shows a highlighted warning with original vs proposed estimate + reasoning and asks before overwriting. Every Teamwork write (PATCH description, PATCH estimate, POST subtask, PATCH subtask) is preceded by a preview and an explicit AskUserQuestion confirmation; --write-back=never gives a full dry-run. For tasklist URLs reuses the teamwork-task filter — only tasks in column 'To Do' assigned to the current user are analysed for write-back; everything else is still fetched and listed read-only so the user can sanity-check teammates' work. Read-only against the board (never moves it) and against time logs (never writes one).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-teamwork-task-analyze.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-task-analyze"
     }
   ]
 }
