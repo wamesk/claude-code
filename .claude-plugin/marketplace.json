@@ -10,7 +10,7 @@
     {
       "name": "git-commit",
       "description": "Turn the current working tree into one or more logical git commits using the TYPE(scope): Message convention from the user's global ~/.claude/CLAUDE.md. Title and body always in English; TYPE and scope inferred from the changes. When the run is tied to a task, the task ID is appended in square brackets — TYPE(scope)[<task-id>]: Message — detected from $ARGUMENTS, --task=<id>, or current branch name (feature/teamwork-task-<id>, task/<id>, ...). When no task ID is detected, the brackets are omitted entirely (never empty []). Groups related changes into one commit each; pass --all-in-one to skip grouping. Never adds Co-Authored-By lines, never pushes, never amends. Singular 'git-commit' — distinct from the 'git-commits-history' plugin which summarises historical commits.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -24,7 +24,7 @@
     {
       "name": "git-commits-history",
       "description": "Fetch and summarize git commits history across all repositories for a date range. Shows timeline with AI-powered summaries, file changes, and project breakdown. Supports GitHub, GitLab, Bitbucket. Renamed from 'git-commits' in v2.0.0 — existing users see /Migration in README; config in ~/.claude/plugins/data/git-commits-wamesk/ is preserved automatically.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -52,7 +52,7 @@
     {
       "name": "laravel-docs",
       "description": "Generate Laravel project specifications (technical, business, admin navigation) for individual models or modules. Auto-detects modular (wamesk/*, Modules/*) vs flat (app/Models) project structure. Configurable output paths, per-project config, and replaceable prompts per documentation type.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -66,7 +66,7 @@
     {
       "name": "dnr-business",
       "description": "Generate a WAME 'Detailný návrh riešenia' (DNR) — the binding pre-development project document — as a branded .docx. Accepts a folder, file(s), or free-form description as input; if invoked inside an existing project repository, deep-analyses modules/architecture for richer context. Outputs a client-language (sk/cs/en) Word document in WAME visual identity (green #20E87A, navy #091145, Inter font), with mandatory sections (Východiskový stav, Ciele, Popis riešenia, Technické riešenie, Fázy, Riziká, Podmienky). Sections 'Fázy' and 'Riziká' (min. 5) are schema-enforced. Never invents client data — uses [DOPLNIŤ] placeholders and reports them as open follow-ups. Since 1.2.0 phase 'trvanie' follows the WAME senior-engineer + Claude Code methodology — per-task minute estimates rolled up to weeks and always expressed as a range (e.g. '3–4 weeks') so the buffer stays visible to the client.",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -80,7 +80,7 @@
     {
       "name": "teamwork-tasks-from-dnr",
       "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md. Since 1.2.0 the per-task estimates follow the WAME senior-engineer + Claude Code methodology — 30–50% lower than legacy hand-written estimates, 15–30% buffer applied on top, anchors documented in SKILL.md.",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -108,7 +108,7 @@
     {
       "name": "teamwork-task-test",
       "description": "Fetch a Teamwork.com task or whole tasklist by URL, extract every acceptance criterion individually, and verify each against the current repository — by running existing Pest / PHPUnit / Laravel Dusk / Cypress / Playwright / Vitest / Jest / Selenium tests where possible, by driving a real browser via the chrome-devtools MCP for UI-shaped criteria, and by writing concrete numbered manual scenarios for anything that cannot be automated. The output is a per-task report where every AC has its own row marked ✅ verified / ⚠️ partial / ❌ failed / 📋 manual / 📝 proposed, plus a tasklist-level roll-up. Read-only against Teamwork by default — never moves the board or posts a comment unless the user opts in; the only default write-back is a sequential, non-overlapping time log so QA work appears in the timesheet. Shares the API token config with the teamwork-task plugin so setup is one-time.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -122,7 +122,7 @@
     {
       "name": "teamwork-task-analyze",
       "description": "Fetch a Teamwork.com task or whole tasklist by URL and prepare it for implementation. Pulls the task name, description, attachments, comments, comment-attached files, and subtasks via REST API v3 (reusing the shared config/token from the teamwork-task plugin), deep-scans the current repository for related code/specs, then interactively rewrites the task description into the canonical WAME format: [optional preamble] → HR → Akceptačné kritériá → HR → Cieľ → HR → Technický popis (Claude Code Plan-Mode output — files, functions, DB schema, step-by-step, edge cases). Pauses with AskUserQuestion (in batches of 4, up to 6 per run) for every clarifying question that arises and folds the answers back into the new description; anything unresolved is preserved as [OTVORENÉ] markers in the relevant section. Reviews existing subtasks (updates outdated ones, proposes splitting tasks above 240 min into 2–6 atomic subtasks when AC have natural cut points; never forces a split for small tasks). Checks the time estimate using the WAME senior-engineer-with-Claude-Code methodology — sets one when missing, otherwise shows a highlighted warning with original vs proposed estimate + reasoning and asks before overwriting. Every Teamwork write (PATCH description, PATCH estimate, POST subtask, PATCH subtask) is preceded by a preview and an explicit AskUserQuestion confirmation; --write-back=never gives a full dry-run. For tasklist URLs reuses the teamwork-task filter — only tasks in column 'To Do' assigned to the current user are analysed for write-back; everything else is still fetched and listed read-only so the user can sanity-check teammates' work. Read-only against the board (never moves it) and against time logs (never writes one).",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -136,7 +136,7 @@
     {
       "name": "teamwork-tasks-from-desk",
       "description": "Turn a Teamwork.com Desk ticket into a structured Teamwork.com Projects task (plus optional subtasks) without leaving the terminal. User provides a Desk ticket URL (https://<workspace>.teamwork.com/desk/tickets/<id>); plugin fetches the ticket — subject, customer, chronological message thread (replies + internal notes) and email attachments — via the Teamwork Desk REST API (https://apidocs.teamwork.com/docs/desk), asks for a Teamwork Projects URL (project or tasklist) so it knows where to file the work, and for an assignee email (may be empty for unassigned). When the proposed task naturally splits into multiple roles (BE/FE/QA/migration), the plugin asks for an email per role. The assignee is resolved via GET /projects/api/v3/people.json?searchTerm=<email>. Using the WAME canonical task format ([preamble] → HR → ## Akceptačné kritériá → HR → ## Cieľ → HR → ## Technický popis) the plugin synthesises a draft main task — title, description, optional subtasks, per-task estimate (WAME senior + Claude Code methodology, 15-minute step, 480-minute cap, split-proposal above 240 min) — and asks clarifying questions via AskUserQuestion in batches of 4 (max 6 per run). The ticket's email attachments are mapped to the right task or subtask via AskUserQuestion (one question per attachment by default). After a full preview + confirmation the plugin POSTs the main task (POST /projects/api/v3/tasklists/{id}/tasks.json), POSTs each confirmed subtask (parentTaskId pointing at the main task), uploads attachments via the pending-file flow and attaches them. The main task is linked back to the Desk ticket — when the Projects API exposes a native Desk-link attribute it is used; otherwise the ticket URL is embedded in the description footer. At the end the plugin posts an internal note in the Desk thread (link to the new Projects task + a structured summary of what was prepared: title, AC count, subtasks list, estimate, attachments uploaded, goal) and offers to draft a customer-facing reply — the draft is ALWAYS posted as an internal note for review, NEVER sent to the customer; the plugin never touches the Desk replies endpoint. Reuses the shared API token config at ~/.claude/plugins/data/teamwork-task-wamesk/config.json — Projects token is shared with the rest of the Teamwork plugin family; the Desk token is stored alongside under teamwork.desk_token (Desk uses a separate API key). Never replies to the Desk customer, never moves the Desk ticket on its board, never logs time, never moves tasks on the Projects board, never runs git.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -150,7 +150,7 @@
     {
       "name": "teamwork-tasks-from-session",
       "description": "Turn the work you just did in a Claude Code session into a Teamwork.com Projects task (plus optional subtasks) — for the common case where you start solving a problem in Claude Code before a task even exists. Reconstructs what the session accomplished (git commits + working-tree diff made since the session started, changed files, repo shape, and the live conversation context), drafts a main task in the canonical WAME format ([preamble] → HR → ## Akceptačné kritériá → HR → ## Cieľ → HR → ## Technický popis, the same Plan-Mode technical write-up as teamwork-task-analyze), proposes 2–6 atomic subtasks when the estimate exceeds 240 min and the work has natural cut points, and computes a WAME senior-engineer-with-Claude-Code estimate (15-minute step, 480-minute cap). It logs the REAL session duration back to Teamwork: the session start is detected from a bundled SessionStart hook that records each session's wall-clock start into the shared config dir, falling back in order to the end of today's last timelog, to the newest session transcript's first timestamp, and finally to asking the user — always shown as an editable proposal, and the logged block is clamped so it never overlaps an existing timelog (one sequential, non-overlapping, 5-minute-aligned entry written in a business tone with an optional (commit: <hash>) suffix). If no Teamwork URL is passed the skill asks where to file the work; a project or tasklist URL creates a new main task there, a single-task URL files the session work as a subtask of that task. Asks via AskUserQuestion which Teamwork email to assign the task to (you by default, unassigned, or a custom colleague email resolved via /projects/api/v3/people.json). Everything is shown in a full preview + confirmation gate before any write (--write-back=never is a full dry-run), and after creating the task the skill asks per run what to do with the board state — leave it, move In progress → Internal testing, or mark complete. Reuses the shared API token config at ~/.claude/plugins/data/teamwork-task-wamesk/config.json with the rest of the Teamwork plugin family (teamwork-task, teamwork-task-test, teamwork-task-analyze, teamwork-tasks-from-desk, teamwork-tasks-from-dnr) and the family's time-logging keys. Hardened Projects writes carried over from teamwork-tasks-from-desk — Python-encoded JSON payloads, the estimatedMinutes write field, an idempotency guard that searches by name before retrying. Never runs git (only reads the commits the session produced), never logs time without confirmation, never writes an overlapping time log, never silently overwrites an estimate, never moves the board or completes the task without asking.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Stanislav Červeňák"
       },
