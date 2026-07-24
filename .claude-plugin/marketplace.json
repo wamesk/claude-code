@@ -79,8 +79,8 @@
     },
     {
       "name": "teamwork-tasks-from-dnr",
-      "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md. Since 1.2.0 the per-task estimates follow the WAME senior-engineer + Claude Code methodology — 30–50% lower than legacy hand-written estimates, 15–30% buffer applied on top, anchors documented in SKILL.md.",
-      "version": "1.2.1",
+      "description": "Generate Teamwork.com import-ready task plan (XLSX + Markdown) from a 'Detailný návrh riešenia' (DNR) document. LLM-powered extraction of tasklists, business-friendly task names, acceptance criteria, and technical plans. Multi-language (sk/en/cs). Works as Claude Code plugin and Claude.ai Skill with the same SKILL.md. Since 1.2.0 the per-task estimates follow the WAME senior-engineer + Claude Code methodology — 30–50% lower than legacy hand-written estimates, 15–30% buffer applied on top, anchors documented in SKILL.md. Since 1.3.0 a contract-first flow detects the repository (backend/frontend/standalone via composer.json / @ionic packages); in a Laravel backend repo it generates a deterministic, redocly-clean OpenAPI 3.1 contract skeleton + data-model from the DNR under docs/contracts/<feature>/ (shared WameSuccess/WameError envelope, Sanctum bearer, x-wame-status: draft, valid even with [DOPLNIŤ]), writes idempotently (existing files become *.proposed + diff, never silently overwritten), adds a 'Definovať API kontrakt' predecessor task with its own MD estimate, and appends a ### Kontrakt block to every API task so backend and frontend can run in parallel; frontend repos only reference an existing contract, standalone runs list it under ## Chýbajúce artefakty. Opt out with --no-contract; never runs git.",
+      "version": "1.3.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
