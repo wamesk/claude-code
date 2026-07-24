@@ -163,7 +163,7 @@
     },
     {
       "name": "laravel-agents",
-      "description": "Seven specialized Laravel subagents — laravel-backend, sql-database, api-architect, pest-tester, code-reviewer-laravel, security-auditor, performance-optimizer — plus four companion skills (wame-laravel-standards, wame-package-development, wame-security-checklist, wame-performance-playbook). The agents are thin ~150-line personas that defer to progressively-disclosed reference skills instead of inlining thousands of lines of examples: API response format (with BaseCollection pagination), database conventions (ULID, enums, sort, dateTimeTz, data via migrations not seeders), service layer, testing patterns, clean composer package/module creation per laravelpackage.com (stubs + composer.json path-repository wiring), OWASP Top 10 security checks, and a performance playbook. Nova-free by design — for Laravel Nova install laravel-nova-agents alongside. Migrated out of the old one-way lara-well/claude/config.sh copy mechanism so the agents version and update like any other plugin.",
+      "description": "Specialized Laravel subagents — laravel-backend, sql-database, api-architect, pest-tester, code-reviewer-laravel, security-auditor, performance-optimizer — plus four companion skills (wame-laravel-standards, wame-package-development, wame-security-checklist, wame-performance-playbook). The agents are thin ~150-line personas that defer to progressively-disclosed reference skills instead of inlining thousands of lines of examples: API response format (with BaseCollection pagination), database conventions (ULID, enums, sort, dateTimeTz, data via migrations not seeders), service layer, testing patterns, clean composer package/module creation per laravelpackage.com (stubs + composer.json path-repository wiring), OWASP Top 10 security checks, and a performance playbook. Nova-free by design — for Laravel Nova install laravel-nova-agents alongside. Migrated out of the old one-way lara-well/claude/config.sh copy mechanism so the agents version and update like any other plugin.",
       "version": "1.0.0",
       "author": {
         "name": "Stanislav Červeňák"
@@ -191,7 +191,7 @@
     },
     {
       "name": "laravel-filament-agents",
-      "description": "Placeholder for WAME's Filament agents and skills. Intentionally empty until the first real Filament work lands (WAME Reality Phase 1) — the filament-resource agent and wame-filament-patterns skill will be written from what that work teaches, not blindly from documentation. Installing this today is a no-op reservation of the plugin name and marketplace slot.",
+      "description": "Filament agents and skills.",
       "version": "0.0.1",
       "author": {
         "name": "Stanislav Červeňák"
