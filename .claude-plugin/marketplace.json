@@ -160,6 +160,34 @@
         "url": "https://github.com/wamesk/claude-code-plugin-teamwork-tasks-from-session.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-teamwork-tasks-from-session"
+    },
+    {
+      "name": "laravel-agents",
+      "description": "Specialized Laravel subagents — laravel-backend, sql-database, api-architect, pest-tester, code-reviewer-laravel, security-auditor, performance-optimizer — plus four companion skills (wame-laravel-standards, wame-package-development, wame-security-checklist, wame-performance-playbook). The agents are thin ~150-line personas that defer to progressively-disclosed reference skills instead of inlining thousands of lines of examples: API response format (with BaseCollection pagination), database conventions (ULID, enums, sort, dateTimeTz, data via migrations not seeders), service layer, testing patterns, clean composer package/module creation per laravelpackage.com (stubs + composer.json path-repository wiring), OWASP Top 10 security checks, and a performance playbook. Nova-free by design — for Laravel Nova install laravel-nova-agents alongside. Migrated out of the old one-way lara-well/claude/config.sh copy mechanism so the agents version and update like any other plugin.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-laravel-agents.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-laravel-agents"
+    },
+    {
+      "name": "laravel-nova-agents",
+      "description": "The laravel-nova subagent for building Laravel Nova admin panels — BaseResource abstract class, custom Fields, Actions, Lenses, Filters, Metrics, CSV/Excel export, and Laravel Dusk browser tests — plus the companion wame-nova-patterns skill holding the Nova reference material and Dusk testing patterns. Install alongside laravel-agents: the pest-tester agent conditionally invokes wame-nova-patterns for Nova/Dusk browser testing only when this plugin is present, so non-Nova projects stay clean.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-laravel-nova-agents.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-laravel-nova-agents"
     }
   ]
 }
