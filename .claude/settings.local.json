@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/sucho/.claude/plugins/**)",
+      "Bash(python3 *)"
+    ]
+  }
+}

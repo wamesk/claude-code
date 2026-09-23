@@ -1,5 +1,6 @@
 config.json
+*.pyc
+.idea
 .DS_Store
 __pycache__/
-*.pyc
-.idea/
+*.py[cod]
