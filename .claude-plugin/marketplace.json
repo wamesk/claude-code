@@ -192,7 +192,7 @@
     {
       "name": "work-mode",
       "description": "Build fast, check once. Fast mode builds without tests, reviews or browser checks and notes what it skipped; /work-mode full runs all the skipped checks at the end. Switch with /work-mode or set a default in /config.",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "author": {
         "name": "Stanislav Červeňák"
       },
