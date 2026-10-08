@@ -94,7 +94,7 @@
     {
       "name": "teamwork-task",
       "description": "Implements a Teamwork.com task or tasklist from its URL: reads the description, comments and attachments, plans and builds each task, commits it, moves the card on the board and logs the time back to Teamwork. You push.",
-      "version": "1.7.0",
+      "version": "1.8.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -164,7 +164,7 @@
     {
       "name": "laravel-agents",
       "description": "Seven Laravel subagents (backend, database, API design, Pest tests, code review, security audit, performance) with the WAME coding standards as companion skills. For Nova, install laravel-nova-agents too.",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -178,7 +178,7 @@
     {
       "name": "laravel-nova-agents",
       "description": "The laravel-nova subagent for Laravel Nova admin panels: resources, fields, actions, lenses, filters, metrics, exports and Dusk tests, written for the installed Nova version. Install it with laravel-agents.",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -191,8 +191,8 @@
     },
     {
       "name": "work-mode",
-      "description": "Build fast, check once. Fast mode builds without tests, reviews or browser checks, makes visual changes live in Chrome so you can watch and comment, and notes what it skipped; /work-mode full runs all the skipped checks at the end. Switch with /work-mode or set a default in /config.",
-      "version": "2.1.0",
+      "description": "Build fast, check once. Fast mode builds without tests, reviews or browser checks, makes visual changes live in Chrome and waits until you approve them, and notes what it skipped; /work-mode full runs all the skipped checks at the end. Switch with /work-mode or set a default in /config.",
+      "version": "2.2.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
