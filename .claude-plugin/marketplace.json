@@ -6,6 +6,9 @@
     "name": "WAME",
     "email": "info@wame.sk"
   },
+  "allowCrossMarketplaceDependenciesOn": [
+    "claude-plugins-official"
+  ],
   "plugins": [
     {
       "name": "git-commit",
@@ -177,8 +180,8 @@
     },
     {
       "name": "laravel-nova-agents",
-      "description": "The laravel-nova subagent for Laravel Nova admin panels: resources, fields, actions, lenses, filters, metrics, exports and Dusk tests, written for the installed Nova version. Install it with laravel-agents.",
-      "version": "1.4.0",
+      "description": "The laravel-nova subagent for Laravel Nova admin panels: resources, fields, actions, lenses, filters, metrics, exports and Dusk tests, written for the installed Nova version. Ships wame-nova-ui, the UI/UX rules for Nova screens that design-agents loads. Install it with laravel-agents.",
+      "version": "1.5.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -188,6 +191,34 @@
         "url": "https://github.com/wamesk/claude-code-plugin-laravel-nova-agents.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-laravel-nova-agents"
+    },
+    {
+      "name": "laravel-filament-agents",
+      "description": "UI/UX rules for Laravel Filament panels (v3, v4, v5) in the wame-filament-ui skill: panel look, navigation, schemas, tables, actions and widgets. design-agents loads it for Filament projects. The Filament developer agent comes later.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-laravel-filament-agents.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-laravel-filament-agents"
+    },
+    {
+      "name": "ionic-agents",
+      "description": "Modern Ionic mobile UI that does not look like the Ionic defaults, in the wame-ionic-ui skill: theming, navigation, sheets, lists, motion and accessibility. Detects Vue, React or Angular from the project. design-agents loads it for Ionic projects. The Ionic developer agent comes later.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-ionic-agents.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-ionic-agents"
     },
     {
       "name": "work-mode",
@@ -202,6 +233,20 @@
         "url": "https://github.com/wamesk/claude-code-plugin-work-mode.git"
       },
       "homepage": "https://github.com/wamesk/claude-code-plugin-work-mode"
+    },
+    {
+      "name": "design-agents",
+      "description": "Wireframes, UI design and UX/accessibility review that do not look AI-generated: wireframer, ui-designer and ux-reviewer agents plus the wame-ui-ux skill (WCAG 2.2 AA, states, AI-look audit). Loads the Nova, Filament and Ionic UI skills when installed. Installs frontend-design and chrome-devtools-mcp with it.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Stanislav Červeňák"
+      },
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wamesk/claude-code-plugin-design-agents.git"
+      },
+      "homepage": "https://github.com/wamesk/claude-code-plugin-design-agents"
     }
   ]
 }
