@@ -69,7 +69,7 @@
     {
       "name": "work-rules",
       "description": "WAME rules for logging time and estimating work, independent of any task tracker: whole 5-minute time blocks, short tasks merged into one shared entry, no overlaps (wame-time-logging), and the wame-estimate-v3 methodology (wame-estimate). The Teamwork plugins and dnr-business depend on it.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -111,7 +111,7 @@
     {
       "name": "teamwork-task",
       "description": "Implements a Teamwork.com task or tasklist from its URL: reads the description, comments and attachments, plans and builds each task, commits it, moves the card on the board and logs the time back to Teamwork. You push.",
-      "version": "1.9.1",
+      "version": "1.9.2",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -125,7 +125,7 @@
     {
       "name": "teamwork-task-test",
       "description": "Checks a Teamwork.com task against the code: verifies each acceptance criterion with the existing tests, a real browser or a manual scenario, reviews UI/UX, performance, security and reachability, and reports the result per criterion. Always runs full, whatever the work mode.",
-      "version": "1.6.1",
+      "version": "1.6.2",
       "author": {
         "name": "Stanislav Červeňák"
       },
@@ -167,7 +167,7 @@
     {
       "name": "teamwork-tasks-from-session",
       "description": "Creates a Teamwork.com task from work you already did in a Claude Code session (its commits, diff and conversation) and logs the real session time to it. Each write needs your confirmation.",
-      "version": "1.5.1",
+      "version": "1.5.2",
       "author": {
         "name": "Stanislav Červeňák"
       },
