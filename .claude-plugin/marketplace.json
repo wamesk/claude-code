@@ -251,7 +251,7 @@
     {
       "name": "design-agents",
       "description": "Wireframes, UI design and UX/accessibility review that do not look AI-generated: wireframer, ui-designer and ux-reviewer agents plus the wame-ui-ux skill (WCAG 2.2 AA, states, AI-look audit). Loads the Nova, Filament and Ionic UI skills when installed. Installs frontend-design and chrome-devtools-mcp with it.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
