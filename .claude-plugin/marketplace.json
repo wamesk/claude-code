@@ -97,7 +97,7 @@
     {
       "name": "teamwork-tasks-from-dnr",
       "description": "Turns a DNR document into a Teamwork.com import-ready task plan (XLSX + Markdown): tasklists and tasks with acceptance criteria, a goal, a technical plan and an estimate.",
-      "version": "1.8.0",
+      "version": "1.9.0",
       "author": {
         "name": "Stanislav Červeňák"
       },
